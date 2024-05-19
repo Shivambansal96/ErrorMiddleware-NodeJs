@@ -51,7 +51,23 @@ cd user-registration-middleware
 npm install
 ```
 
-### 3. Import Middleware Functions
+### 3. Test with Postman
+To test the user registration functionality, open your preferred API testing tool like Postman and send a POST request to http://localhost:8008/registration with the following JSON object in the request body:
+
+```
+{
+    "firstName": "Shivam",
+    "lastName": "Bansal",
+    "email": "bansal.shivam1216@gmail.com",
+    "phoneNumber": "7432854909",
+    "password": "Qwerty@123"
+}
+
+```
+
+Ensure that the request is sent with the Content-Type header set to application/json. You should receive a response indicating whether the user was registered successfully or if there were any validation errors.
+
+<!-- ### 4. Import Middleware Functions
 
 Import the middleware functions (`validateUser` and `errorHandlingMiddleware`) from the library in your Express application.
 
@@ -77,30 +93,14 @@ app.use(errorHandlingMiddleware);
 app.listen(8008, () => {
     console.log('Server is up and running at http://localhost:8008');
 });
-```
+``` -->
 
 ### 4. Run Your Application
 
 Start your Express application and test the user registration functionality.
 
 
-### 5. Test with Postman
-To test the user registration functionality, open your preferred API testing tool like Postman and send a POST request to http://localhost:8008/registration with the following JSON object in the request body:
-
-```
-{
-    "firstName": "Shivam",
-    "lastName": "Bansal",
-    "email": "bansal.shivam1216@gmail.com",
-    "phoneNumber": "7432854909",
-    "password": "Qwerty@123"
-}
-
-```
-
-Ensure that the request is sent with the Content-Type header set to application/json. You should receive a response indicating whether the user was registered successfully or if there were any validation errors.
-
-### 6. Customize Middleware
+### 5. Customize Middleware
 
 Customize the middleware functions as needed to fit your specific validation requirements.
 ```
