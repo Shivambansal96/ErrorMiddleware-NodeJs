@@ -48,7 +48,8 @@ Navigate into the cloned directory and install the dependencies using npm:
 
 ```bash
 cd user-registration-middleware
-npm install
+npm init 
+npm i express
 ```
 
 ### 3. Test with Postman
