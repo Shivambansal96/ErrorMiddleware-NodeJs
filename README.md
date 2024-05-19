@@ -26,57 +26,66 @@ This Node.js library provides middleware for validating user registration data i
 - Ensures the phone number has a minimum length of 10 digits.
 - Verifies that the password is at least 8 characters long and contains at least one uppercase letter, one digit, and one special character.
 
+Sure, here's an updated "How to Use" section with different headers for better readability:
+
+```markdown
 ## How to Use
 
-To use this library in your Node.js Express application, follow these steps:
+### 1. Clone the Repository
 
-1. **Clone the Repository**: Clone the repository to your local machine using the following command:
+Clone the repository to your local machine using the following command:
 
-    ```bash
-    git clone <repository-url>
-    ```
+```bash
+git clone <https://github.com/Shivambansal96/ErrorMiddleware-NodeJs>
+```
 
-    Replace `<repository-url>` with the URL of your repository.
+### 2. Install Dependencies
 
-2. **Install Dependencies**: Navigate into the cloned directory and install the dependencies using npm:
+Navigate into the cloned directory and install the dependencies using npm:
 
-    ```bash
-    cd user-registration-validation
-    npm install
-    ```
+```bash
+cd user-registration-middleware
+npm install
+```
 
-3. **Import Middleware Functions**: Import the middleware functions (`validateUser` and `errorHandlingMiddleware`) from the library in your Express application.
+### 3. Import Middleware Functions
 
-    Example:
+Import the middleware functions (`validateUser` and `errorHandlingMiddleware`) from the library in your Express application.
 
-    ```javascript
-    const express = require('express');
-    const { validateUser, errorHandlingMiddleware } = require('user-registration-validation');
+Example:
 
-    const app = express();
+```javascript
+const express = require('express');
+const { validateUser, errorHandlingMiddleware } = require('user-registration-middleware');
 
-    app.use(express.json());
+const app = express();
 
-    app.post('/registration', validateUser, (req, res) => {
-        res.status(200).json({
-            status: true,
-            message: 'User Registered Successfully.',
-        });
+app.use(express.json());
+
+app.post('/registration', validateUser, (req, res) => {
+    res.status(200).json({
+        status: true,
+        message: 'User Registered Successfully.',
     });
+});
 
-    app.use(errorHandlingMiddleware);
+app.use(errorHandlingMiddleware);
 
-    app.listen(8008, () => {
-        console.log('Server is up and running at http://localhost:8008');
-    });
-    ```
+app.listen(8008, () => {
+    console.log('Server is up and running at http://localhost:8008');
+});
+```
 
-4. **Run Your Application**: Start your Express application and test the user registration functionality.
+### 4. Run Your Application
 
-5. **Customize Middleware**: Customize the middleware functions as needed to fit your specific validation requirements.
+Start your Express application and test the user registration functionality.
 
+### 5. Customize Middleware
 
+Customize the middleware functions as needed to fit your specific validation requirements.
+```
 
+Feel free to adjust the content as needed!
 
 
 
