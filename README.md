@@ -9,6 +9,20 @@ This Node.js library provides middleware for validating user registration data i
 - Ensures the phone number has a minimum length of 10 digits.
 - Verifies that the password is at least 8 characters long and contains at least one uppercase letter, one digit, and one special character.
 
+## Special Features
+
+The middleware uses special regular expressions and operators to enforce specific validation rules:
+
+- **First Name and Last Name Validation**: The regular expression `/^[A-Z]/` ensures that the first character of the first name and last name is a capital letter. This helps maintain consistency and professionalism in user names.
+
+- **Email Validation**: The validation for the presence of the `@` symbol (`/@/`) ensures that the email address follows the standard format for email addresses, helping to prevent invalid or misspelled email addresses from being accepted.
+
+- **Phone Number Validation**: The condition `phoneNumber.length < 10` ensures that the phone number has a minimum length of 10 digits. This prevents users from entering incomplete or incorrect phone numbers.
+
+- **Password Validation**: The regular expression `/(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/` ensures that the password contains at least one uppercase letter, one digit, and one special character. This enhances the security of user accounts by enforcing strong password requirements.
+
+These features, along with the use of the `.test()` method, make sure that user registration data in an Express application is thoroughly checked and validated.
+
 ## How to Use
 
 ### 1. Clone the Repository
