@@ -53,9 +53,23 @@ npm i express
 ```
 
 ### 3. Test with Postman
-To test the user registration functionality, open your preferred API testing tool like Postman and send a POST request to http://localhost:8008/registration with the following JSON object in the request body:
 
-```
+To validate the user registration functionality, follow these steps using Postman:
+
+1. **Open Postman**: Launch Postman, your preferred API testing tool.
+
+2. **Select Request Method**: Choose the POST method from the dropdown menu.
+
+3. **Enter Request URL**: In the address bar, enter `http://localhost:8008/registration` to specify the endpoint for user registration.
+
+4. **Set Request Body to JSON**:
+   - Click on the Body tab.
+   - Select the raw option.
+   - Choose JSON from the dropdown menu.
+
+5. **Enter JSON Object**: Copy and paste the following JSON object into the body section:
+
+```json
 {
     "firstName": "Shivam",
     "lastName": "Bansal",
@@ -63,10 +77,14 @@ To test the user registration functionality, open your preferred API testing too
     "phoneNumber": "7432854909",
     "password": "Qwerty@123"
 }
-
 ```
 
-Ensure that the request is sent with the Content-Type header set to application/json. You should receive a response indicating whether the user was registered successfully or if there were any validation errors.
+6. **Send Request**: Click on the Send button to submit the POST request to the specified endpoint.
+
+7. **Review Response**: Once the request is processed, review the response from the server. If the registration is successful, you should receive a response indicating the status and a message confirming successful registration.
+
+By following these steps, you can effectively test the user registration functionality using Postman, ensuring that the provided data is accurately processed and registered within the system.
+
 
 <!-- ### 4. Import Middleware Functions
 
