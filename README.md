@@ -46,6 +46,4 @@ app.listen(8008, () => {
 });
 ```
 
-## Contributing
 
-Contributions are welcome! Please submit a pull request or open an issue to discuss improvements or bugs.
