@@ -26,9 +26,6 @@ This Node.js library provides middleware for validating user registration data i
 - Ensures the phone number has a minimum length of 10 digits.
 - Verifies that the password is at least 8 characters long and contains at least one uppercase letter, one digit, and one special character.
 
-Sure, here's an updated "How to Use" section with different headers for better readability:
-
-```markdown
 ## How to Use
 
 ### 1. Clone the Repository
