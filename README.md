@@ -81,37 +81,12 @@ Start your Express application and test the user registration functionality.
 
 Customize the middleware functions as needed to fit your specific validation requirements.
 ```
-
 Feel free to adjust the content as needed!
+```
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-## Installation
+<!-- ## Installation
 
 Install the library using npm:
 
@@ -146,5 +121,4 @@ app.listen(8008, () => {
     console.log('Server is up and running at http://localhost:8008');
 });
 ```
-
  -->
